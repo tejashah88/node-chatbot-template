@@ -33,7 +33,18 @@ Note: If you are using heroku, be sure to go the `Settings` page and edit the en
 
 ## Getting started
 #### `index.js`
-For the most part, you'll be using express's `Router` objects to mount endpoints to functions. By default, the `apiRouter` object mounts to `/api`.
+For the most part, you'll be using express's `Router` objects to mount endpoints to functions. By default, the `apiRouter` object mounts to `/api`.By default, the `apiRouter` object mounts to `/api`. You can also add other routers and pass them as a map in `createServer` as the 2nd argument.
+
+```javascript
+const apiRouter = express.Router();
+// ...
+
+const pngsRouter = express.Router();
+const gifsRouter = express.Router();
+// ...
+
+const server = createServer(apiRouter, [pngsRouter, gifsRouter]);
+```
 
 For using dialogflow via a webhook interaction, the final endpoint will be `<hosting-url>/api/chat`. There are also some examples for invoking events and queries against the bot via the non-webhook integration.
 
