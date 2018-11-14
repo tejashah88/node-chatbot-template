@@ -1,0 +1,18 @@
+{
+  "format": ".env",
+  "file": ".env",
+  "config": {
+    "DIALOGFLOW_PROJECT_ID": {
+      "description": "The project ID for Dialogflow Client",
+      "required": false
+    },
+    "DIALOGFLOW_SESSION_ID": {
+      "description": "Any random series of characters.",
+      "required": false
+    },
+    "FIREBASE_CREDS_FILE": {
+      "description": "The location of the firebase admin credentials file (relative to the root folder). MAKE SURE TO ADD THIS FILE TO YOUR `.gitignore`!",
+      "required": false
+    }
+  }
+}
